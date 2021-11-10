@@ -6,6 +6,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet, Text, View } from 'react-native';
+import HomeScreen from './assets/Components/Screens/Home';
 
 import {FontAwesome5} from '@expo/vector-icons'
 
@@ -16,7 +17,6 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator tabBarOptions={{
         showLabel: false,
-        
       }}>
           {
 
@@ -79,13 +79,13 @@ function SettingsScreen() {
   );
 }
 
-function HomeScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home</Text>
-    </View>
-  );
-}
+// function HomeScreen() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Home</Text>
+//     </View>
+//   );
+// }
 
 function NotificationScreen() {
   return (
