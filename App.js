@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 // import React from 'react';
 import * as React from 'react';
-import { AntDesign } from '@expo/vector-icons';
+import { AntDesign,Feather } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -39,6 +39,15 @@ export default function App() {
                 color={focused ? 'black' : 'gray'}
                 ></FontAwesome5>
                 {/* <AntDesign name="search1" size={25} color="black" /> */}
+              </View>
+            )
+        }}></Tab.Screen>
+        
+        <Tab.Screen name={"Add"} component={AddScreen} options={{
+            tabBarIcon: ({focused}) => (
+            <View>
+              {/* <Feather name="tool" size={28} color={focused ? 'black' : 'gray'}  /> */}
+              <FontAwesome5 name="toolbox" size={30} color={focused ? 'black' : 'gray'}  />
               </View>
             )
           }}></Tab.Screen>
@@ -79,13 +88,13 @@ function SettingsScreen() {
   );
 }
 
-// function HomeScreen() {
-//   return (
-//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-//       <Text>Home</Text>
-//     </View>
-//   );
-// }
+function AddScreen() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Add</Text>
+    </View>
+  );
+}
 
 function NotificationScreen() {
   return (
@@ -106,7 +115,7 @@ function ChatScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },

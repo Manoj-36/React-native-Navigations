@@ -6,26 +6,29 @@ import loki from './Screens/Images/loki.png'
 const items = [
     {
       id: 1,
-      Image: {Cap1},
+      Image : require('./Screens/Images/cap1.jpg'),
       title: "Captain.A",
     },
     {
       id: 2,
-      Image: {cap2},
-      title: "Software Updates",
+      Image : require('./Screens/Images/ds.jpg'),
+      title: "Docter.S",
     },
-    {
+     {
       id: 3,
-      Image:{ds},
-      title: "Climate",
+      Image : require('./Screens/Images/loki.png'),
+      title: "Loki",
     },
     {
       id: 4,
-      Image: {loki},
-      title: "Controls",
+      Image : require('./Screens/Images/cap2.jpg'),
+      title: "Cap",
     },
-            
-           
+    {
+      id: 6,
+      Image : require('./Screens/Images/sl.png'),
+      title: "Stan lee",
+    } 
 ];
 
 export default items;

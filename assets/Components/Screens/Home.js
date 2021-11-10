@@ -5,13 +5,13 @@ import items from '../Items'
 export default function HomeScreen() {
     return (
         <ScrollView
-        scrollEventThrottle={506}
+        scrollEventThrottle={16}
         >
-            <View style={{flex:1,backgroundColor:'white',padding:20}}>
+            <View style={{flex:1,padding:20}}>
                 <Text style={{fontSize: 24, fontWeight:'700',paddingHorizontal:20}}>
                     Avengers
                 </Text>
-                <View style={{ height: 330, marginTop: 20 }}>
+                <View style={{ height: 250, marginTop: 20 }}>
                      <ScrollView
                             horizontal={true}
                             showsHorizontalScrollIndicator={false}
