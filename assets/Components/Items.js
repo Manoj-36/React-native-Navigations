@@ -1,27 +1,23 @@
-import Cap1 from './Screens/Images/cap1.jpg'
-import cap2 from './Screens/Images/cap2.jpg'
-import ds from './Screens/Images/ds.jpg'
-import loki from './Screens/Images/loki.png'
 
 const items = [
     {
       id: 1,
-      Image : require('./Screens/Images/cap1.jpg'),
+      Image : require('./Screens/Images/cap1.png'),
       title: "Captain.A",
     },
     {
       id: 2,
-      Image : require('./Screens/Images/ds.jpg'),
-      title: "Docter.S",
-    },
-     {
-      id: 3,
       Image : require('./Screens/Images/loki.png'),
       title: "Loki",
     },
+     {
+      id: 3,
+      Image : require('./Screens/Images/ds2.png'),
+      title: "Docter.S",
+    },
     {
       id: 4,
-      Image : require('./Screens/Images/cap2.jpg'),
+      Image : require('./Screens/Images/cap2.2.png'),
       title: "Cap",
     },
     {
