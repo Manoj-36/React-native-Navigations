@@ -17,7 +17,29 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator tabBarOptions={{
         showLabel: false,
-      }}>
+      }}
+        screenOptions={{
+        // headerShown: false,
+          
+          headerStyle: {
+            backgroundColor: 'skyblue',
+            
+          },
+          tabBarStyle: {
+            height: 60,
+            bottom: 16,
+            right: 16,
+            left: 16,
+            borderRadius:10,
+            position: 'absolute',
+            // backgroundColor: '#f7cbd0',
+            
+           
+
+          }
+        }}
+        
+      >
           {
 
           }
@@ -25,9 +47,9 @@ export default function App() {
             tabBarIcon: ({focused}) => (
               <View>
                 <FontAwesome5 name="home" size={25}
-                color={focused ? 'black' : 'gray'}
+                color={focused ? '#f73e53' : 'black'}
                 ></FontAwesome5>
-                {/* <AntDesign name="home" size={25} color={focused ? 'red' : 'gray'}/> */}
+                {/* <AntDesign name="home" size={25} color={focused ? 'red' : '#4f4d4e'}/> */}
               </View>
             )
           }} ></Tab.Screen>
@@ -36,7 +58,7 @@ export default function App() {
             tabBarIcon: ({focused}) => (
               <View>
                 <FontAwesome5 name="search" size={25}
-                color={focused ? 'black' : 'gray'}
+                color={focused ? '#f73e53' : 'black'}
                 ></FontAwesome5>
                 {/* <AntDesign name="search1" size={25} color="black" /> */}
               </View>
@@ -46,8 +68,8 @@ export default function App() {
         <Tab.Screen name={"Add"} component={AddScreen} options={{
             tabBarIcon: ({focused}) => (
             <View>
-              {/* <Feather name="tool" size={28} color={focused ? 'black' : 'gray'}  /> */}
-              <FontAwesome5 name="toolbox" size={30} color={focused ? 'black' : 'gray'}  />
+              {/* <Feather name="tool" size={28} color={focused ? 'black' : '#4f4d4e'}  /> */}
+              <FontAwesome5 name="toolbox" size={30} color={focused ? '#f73e53' : 'black'}  />
               </View>
             )
           }}></Tab.Screen>
@@ -56,7 +78,7 @@ export default function App() {
             tabBarIcon: ({focused}) => (
               <View>
                 <FontAwesome5 name="bell" size={25}
-                color={focused ? 'black' : 'gray'}
+                color={focused ? '#f73e53' : 'black'}
                 ></FontAwesome5>
                 {/* <AntDesign name="home" size={24} color="black" /> */}
               </View>
@@ -68,7 +90,7 @@ export default function App() {
               <View>
                 {/* <AntDesign name="home" size={24} color="black" /> */}
                 <Ionicons name="person" size={25}
-                color={focused ? 'black' : 'gray'}
+                color={focused ? '#f73e53' : 'black'}
                  />
               </View>
             )
@@ -115,7 +137,6 @@ function ChatScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
