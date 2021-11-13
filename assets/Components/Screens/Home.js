@@ -2,10 +2,7 @@ import React,{useState} from 'react'
 import { View, Text, ScrollView, Image, TouchableOpacity, Alert,Modal } from 'react-native'
 import items from '../Items'
 import Movies from '../movielist'
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {FontAwesome5} from '@expo/vector-icons'
-import Ironman from './chareters/Ironman';
 import { AntDesign } from '@expo/vector-icons';
 
 
@@ -38,7 +35,15 @@ export default function HomeScreen({ navigation }) {
                                 marginLeft: 15,
                                 borderWidth: 1,
                                 borderColor: 'black',
-                                borderRadius: 15
+                                borderRadius: 15,
+                                shadowColor:'#000',
+                                        shadowOffset: {
+                                        width: 150,
+                                        height: 10
+                                    
+                                        },
+                                        shadowOpacity: .5,
+                                        shadowRadius: 15
                                 
                             }} key={item.id}>
                             <View style={{flex:4}}>
@@ -61,23 +66,70 @@ export default function HomeScreen({ navigation }) {
                 <ScrollView>
                     {Movies.map(movie => (
                         
-                        <View style={{top:1,bottom:100}} key={movie.id}>
+                        <View style={{top:1,bottom:500}} key={movie.id}>
                             <TouchableOpacity
-                             onPress={() => Alert.alert('Still working on this Screen')}
+                                onPress={() => setModelOpen(true)}
                             >
-                            <View style={{ paddingTop:30}}>
-                                <Text style={{fontSize:20,textAlign:'center',bottom:10}}>{movie.title}</Text>
-                            </View>
-                                <View style={{alignItems:'center',justifyContent:'center'}}>
-                                    <Image style={{width:300,height:150,borderRadius:15}} source={movie.image}/>
+                                {/* <View style={{ paddingTop:30}}>
+                                    <Text style={{fontSize:20,textAlign:'center',bottom:10}}>{movie.title}</Text>
+                                </View> */}
+                                <View style={{
+                                    alignItems: 'center', justifyContent: 'center'
+                                    
+                                }}>
+                                    <Image style={{
+                                        width: '90%', marginTop: 30, height: 150, borderRadius: 15,
+                                        shadowColor:'#000',
+                                        shadowOffset: {
+                                        width: 0,
+                                        height: 10
+                                    
+                                        },
+                                        shadowOpacity: 1,
+                                        shadowRadius: 15
+                                    }} source={movie.image} />
                                 </View>
+                                    <View
+                                    style={{
+                                    backgroundColor:'red'
+                                }}
+                                >
+                                        <Modal visible={modelOpen} animationType='slide'
+                                            transparent={true}
+                                            style={{
+                                                margintop: 200,
+                                                
+                                        }}
+                                        >
+                                            <View
+                                                style={{
+                                                    // backgroundColor: 'rgba( 255, 255, 255, 0.95 )',
+                                                    backgroundColor:'white',
+                                                    blurRadius:5,
+                                                    top: 300,
+                                                    paddingTop: 40,
+                                                    paddingBottom: 400,
+                                                    borderTopRightRadius: 50,
+                                                    borderTopLeftRadius: 50,
+                                                    
+                                            }}
+                                            >
+                                                <View style={{ marginLeft:'85%'}}>
+                                                    <AntDesign name="closecircleo" size={30} color="black" onPress={() => setModelOpen(false)} />
+                                            </View>
+                                            
+                                        </View>
+                                        <Text>{movie.title}</Text>
+                                        {/* <Image source={movie.image}/> */}
+                                        </Modal>
+                                    </View>
                             </TouchableOpacity>
                         </View>
                         
                     ))}
                 </ScrollView>
                 <View>
-                    <Modal visible={modelOpen} animationType='slide'
+                    {/* <Modal visible={modelOpen} animationType='slide'
                         transparent={true}
                         style={{
                             margintop: 200,
@@ -100,10 +152,10 @@ export default function HomeScreen({ navigation }) {
                             <View style={{ marginLeft:'85%'}}>
                                 <AntDesign name="closecircleo" size={30} color="black" onPress={() => setModelOpen(false)} />
                             </View>
-                            <Ironman />
+                            
                         </View>
-                    </Modal>
-                <FontAwesome5 name="home" size={30} onPress={() =>setModelOpen(true)} />
+                    </Modal> */}
+                {/* <FontAwesome5 name="home" size={30} onPress={() => navigation.navigate('Ironman')} /> */}
                 </View>
             </View>
         </ScrollView>
