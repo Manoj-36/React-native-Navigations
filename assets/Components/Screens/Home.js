@@ -6,7 +6,7 @@ import {FontAwesome5} from '@expo/vector-icons'
 import { AntDesign } from '@expo/vector-icons';
 
 
-export default function HomeScreen({ navigation }) {
+export default function AvengersScreen({ navigation }) {
     const [modelOpen, setModelOpen] = useState(false);
 
     return (
