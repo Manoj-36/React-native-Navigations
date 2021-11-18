@@ -5,7 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import AvengersScreen from './assets/Components/Screens/Home';
-
+import Ironman from './assets/Components/Screens/chareters/Ironman';
 
 function DetailsScreen() {
   return (
@@ -44,7 +44,7 @@ function SettingsScreen({ navigation }) {
 function ListScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <AvengersScreen />
+      <AvengersScreen onPress={() => navigation.navigate('Ironman')} />
     </View>
   );
 }
@@ -89,7 +89,7 @@ const ListStack = createNativeStackNavigator();
 function ListStackScreen() {
   return (
     <SettingsStack.Navigator>
-      <ListStack.Screen name="List" component={ListScreen} />
+      <ListStack.Screen name="Avengers" component={ListScreen} />
       <ListStack.Screen name="Details" component={DetailsScreen} />
     </SettingsStack.Navigator>
   );
