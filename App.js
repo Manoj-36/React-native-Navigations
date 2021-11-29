@@ -19,6 +19,7 @@ function HomeScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Home screen</Text>
+      <Ironman />
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Details')}
@@ -44,7 +45,7 @@ function SettingsScreen({ navigation }) {
 function ListScreen({ navigation }) {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <AvengersScreen onPress={() => navigation.navigate('Ironman')} />
+      <AvengersScreen />
     </View>
   );
 }
@@ -129,19 +130,7 @@ export default function App() {
           }}
         
         />
-        <Tab.Screen name="Settings" component={SettingsStackScreen}
-          options={{
-            tabBarIcon: ({ focused }) => (
-              <View>
-                <Ionicons name="settings-outline" size={25}
-                color={focused ? '#f73e53' : 'gray'}
-                ></Ionicons>
-              </View>
-          )
-        }}
-        >
-          
-        </Tab.Screen>
+       
         <Tab.Screen name="List" component={ListStackScreen}
         options={{
             tabBarIcon: ({ focused }) => (
@@ -171,7 +160,19 @@ export default function App() {
          
         </Tab.Screen>
 
-        
+         <Tab.Screen name="Settings" component={SettingsStackScreen}
+          options={{
+            tabBarIcon: ({ focused }) => (
+              <View>
+                <Ionicons name="settings-outline" size={25}
+                color={focused ? '#f73e53' : 'gray'}
+                ></Ionicons>
+              </View>
+          )
+        }}
+        >
+          
+        </Tab.Screen>
       </Tab.Navigator>
     </NavigationContainer>
   );

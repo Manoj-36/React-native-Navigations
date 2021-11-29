@@ -1,10 +1,13 @@
 import React from 'react'
-import {View ,Text} from 'react-native'
+import { View, Text } from 'react-native'
+
 
 export default function Ironman() {
     return (
         <View>
-            <Text>hello</Text>
+            <Text>
+                Hello
+            </Text>
         </View>
     )
 }
